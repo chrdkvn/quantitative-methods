@@ -1,8 +1,13 @@
 const teamMembers = [
-	{ name: "Dizon, Samantha Jenica L.", role: "Group 2 Member" },
+	{
+		name: "Dizon, Samantha Jenica L.",
+		role: "Group 2 Member",
+		image: "assets/images/Dizon, Samantha Jenica L..jpg"
+	},
 	{
 		name: "Estinopo, Chard Kevin H.",
 		role: "Group 2 Member",
+		image: "assets/images/Estinopo, Chard Kevin H..jpg",
 		skills: [
 			{ name: "Java", icon: "J" },
 			{ name: "Python", icon: "Py" },
@@ -10,12 +15,32 @@ const teamMembers = [
 			{ name: "CSS", icon: "#" }
 		]
 	},
-	{ name: "Flores, Marksison T.", role: "Group 2 Member" },
-	{ name: "Galido, Wayne kurt T.", role: "Group 2 Member" },
-	{ name: "Garofil, Ariene C.", role: "Group 2 Member" },
+	{
+		name: "Flores, Marksison T.",
+		role: "Group 2 Member",
+		image: "assets/images/Flores, Marksison T..jpg"
+	},
+	{
+		name: "Galido, Wayne kurt T.",
+		role: "Group 2 Member",
+		image: "assets/images/Galido, Wayne kurt T..jpg"
+	},
+	{
+		name: "Garofil, Ariene C.",
+		role: "Group 2 Member",
+		image: "assets/images/Garofil, Ariene C..jpg"
+	},
 	{ name: "Garsota, Mohandas Nick Vincent R.", role: "Group 2 Member" },
-	{ name: "Gorgonia, Mariel A.", role: "Group 2 Member" },
-	{ name: "Irinco, Angel Ann", role: "Group 2 Member" },
+	{
+		name: "Gorgonia, Mariel A.",
+		role: "Group 2 Member",
+		image: "assets/images/Gorgonia, Mariel A..jpg"
+	},
+	{
+		name: "Irinco, Angel Ann",
+		role: "Group 2 Member",
+		image: "assets/images/Irinco, Angel Ann.jpg"
+	},
 ];
 
 const programmingSkills = [
@@ -41,7 +66,9 @@ function renderTeam() {
 		.map(
 			(member) => `
 				<div class="team-member">
-					<div class="avatar">${getInitials(member.name)}</div>
+					<div class="avatar ${member.image ? "avatar-image" : ""}">
+						${member.image ? `<img src="${member.image}" alt="${member.name}" />` : getInitials(member.name)}
+					</div>
 					<div>
 						<strong>${member.name}</strong>
 						<small>${member.role}</small>
