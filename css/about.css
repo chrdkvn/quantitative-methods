@@ -1,0 +1,168 @@
+.about-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+}
+
+.about-grid p,
+.about-grid li {
+	color: var(--muted);
+	font-size: 13px;
+}
+
+.about-grid ul {
+	padding-left: 19px;
+}
+
+.about-grid li {
+	margin: 8px 0;
+}
+
+.team-list {
+	display: grid;
+	gap: 10px;
+}
+
+.team-member {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	padding: 12px;
+	border: 1px solid var(--line);
+	border-radius: 11px;
+}
+
+.avatar {
+	display: grid;
+	width: 72px;
+	height: 72px;
+	place-items: center;
+	border-radius: 16px;
+	background: var(--pale);
+	color: var(--blue-text);
+	font-weight: 800;
+	overflow: hidden;
+	flex-shrink: 0;
+}
+
+.avatar img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.team-member strong {
+	display: block;
+	font-size: 13px;
+}
+
+.team-member small {
+	color: var(--muted);
+	font-size: 11px;
+}
+
+.team-member .member-skills {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+	margin-top: 8px;
+}
+
+.skill-badge {
+	display: inline-flex;
+	align-items: center;
+	gap: 5px;
+	padding: 4px 7px 4px 4px;
+	border: 1px solid var(--line);
+	border-radius: 7px;
+	background: var(--surface);
+	color: var(--muted);
+	font-size: 10px;
+	font-weight: 700;
+}
+
+.skill-icon {
+	display: grid;
+	min-width: 20px;
+	height: 20px;
+	place-items: center;
+	border-radius: 5px;
+	background: var(--pale);
+	color: var(--blue-text);
+	font-size: 10px;
+	font-weight: 800;
+}
+
+.professor-panel {
+	margin-top: 20px;
+}
+
+.professor-panel h2 {
+	margin: 5px 0 14px;
+}
+
+.professor-panel .team-member {
+	max-width: 520px;
+	padding: 14px 16px;
+	background: var(--surface);
+	border: 1px solid var(--line);
+	border-radius: 16px;
+}
+
+.professor-panel .team-member .avatar {
+	width: 140px;
+	height: 140px;
+	border-radius: 20px;
+	border: 1px solid var(--line);
+}
+
+.professor-panel .team-member strong {
+	font-size: 17px;
+	color: var(--text);
+}
+
+.professor-panel .team-member small {
+	font-size: 12px;
+	font-weight: 600;
+	color: var(--muted);
+}
+/* Consistent, portrait-focused profile presentation */
+.team-list { gap: 11px; }
+.profile-card {
+  min-width: 0;
+  min-height: 94px;
+  padding: 10px;
+  background: var(--surface);
+  transition: border-color .18s ease, transform .18s ease;
+}
+.profile-card:hover { border-color: var(--blue); transform: translateY(-1px); }
+.profile-card .avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 13px;
+  background: var(--pale);
+}
+.profile-card .avatar img,
+.professor-avatar img {
+  width: 100%; height: 100%; display: block;
+  object-fit: cover; object-position: center 32%;
+}
+.profile-copy { min-width: 0; }
+.profile-copy strong { line-height: 1.35; overflow-wrap: anywhere; }
+.profile-copy small { display: block; margin-top: 4px; }
+.avatar-placeholder { font-size: 20px; }
+.professor-panel .team-member { max-width: none; }
+.professor-panel .team-member .professor-avatar {
+  width: 112px; height: 112px; flex: 0 0 112px;
+  border-radius: 16px; overflow: hidden;
+}
+.professor-panel .team-member > div:last-child { min-width: 0; }
+@media (max-width: 420px) {
+  .profile-card { min-height: 82px; gap: 10px; padding: 9px; }
+  .profile-card .avatar { width: 62px; height: 62px; border-radius: 11px; }
+  .profile-copy strong { font-size: 12px; }
+  .professor-panel .team-member { align-items: center; gap: 12px; padding: 12px; }
+  .professor-panel .team-member .professor-avatar { width: 88px; height: 88px; flex-basis: 88px; }
+  .professor-panel .team-member strong { font-size: 14px; }
+}
